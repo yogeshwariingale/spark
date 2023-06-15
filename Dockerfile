@@ -7,7 +7,7 @@ ARG jmx_prometheus_javaagent_version=0.15.0
 ARG aws_java_sdk_version=1.11.682
 ARG spark_uid=185
 # Download Spark
-COPY https://archive.apache.org/dist/spark/spark-${spark_version}/spark-${spark_version}-bin-without-hadoop.tgz .
+COPY spark-${spark_version}-bin-without-hadoop.tgz .
 # Unzip Spark
 RUN tar -xvzf spark-${spark_version}-bin-without-hadoop.tgz
 RUN mv spark-${spark_version}-bin-without-hadoop spark
